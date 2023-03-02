@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-gray-900 py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="flex items-center">
+          <img
+            src="https://source.unsplash.com/100x100/?logo"
+            alt="Logo"
+            class="h-8 w-8 rounded-full mr-2"
+          />
+          <span class="text-xl font-bold text-white">My Netflix Clone</span>
+        </a>
+        <nav class="text-white">
+          <ul class="flex">
+            <li class="mr-6">
+              <a href="#" class="hover:text-gray-400">Home</a>
+            </li>
+            <li class="mr-6">
+              <a href="#" class="hover:text-gray-400">Movies</a>
+            </li>
+            <li class="mr-6">
+              <a href="#" class="hover:text-gray-400">TV Shows</a>
+            </li>
+            <li class="mr-6">
+              <a href="#" class="hover:text-gray-400">My List</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex items-center">
+          <input
+            type="text"
+            class="px-4 py-2 rounded-full bg-gray-800 text-white w-64 mr-4"
+            placeholder="Search"
+          />
+          <button
+            class="bg-red-600 px-4 py-2 rounded-full font-bold hover:bg-red-700"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-gray-900">
+      <div class="container mx-auto flex items-center relative">
+        <img
+          src="https://source.unsplash.com/1600x900/?netflix,banner"
+          alt="Banner"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 flex justify-center items-center">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">
+              Watch Anytime, Anywhere
+            </h2>
+            <p class="text-white mb-8">
+              Unlimited movies, TV shows, and more. Watch anywhere. Cancel
+              anytime.
+            </p>
+            <button
+              class="bg-red-600 px-6 py-2 rounded-full font-bold hover:bg-red-700"
+            >
+              Join Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-10">Popular Categories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="relative">
+            <img
+              src="https://source.unsplash.com/1600x900/?action,movie"
+              alt="Action & Adventure"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Action & Adventure</h3>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://source.unsplash.com/1600x900/?drama,movie"
+              alt="Drama"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Drama</h3>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://source.unsplash.com/1600x900/?comedy,movie"
+              alt="Comedy"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Comedy</h3>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://source.unsplash.com/1600x900/?horror,movie"
+              alt="Horror"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Horror</h3>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-10">New Releases</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?movie"
+              alt="Movie 3"
+              class="w-1/3 rounded-lg shadow-lg object-cover"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">Movie 3</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?tv-show"
+              alt="TV Show 3"
+              class="w-1/3 object-cover rounded-lg shadow-lg"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">TV Show 3</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-10">Top Picks</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?movie"
+              alt="Movie 4"
+              class="w-1/3 object-cover rounded-lg shadow-lg"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">Movie 4</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?tv-show"
+              alt="TV Show 4"
+              class="w-1/3 object-cover rounded-lg shadow-lg"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">TV Show 4</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?movie"
+              alt="Movie 5"
+              class="w-1/3 object-cover rounded-lg shadow-lg"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">Movie 5</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?tv-show"
+              alt="TV Show 5"
+              class="w-1/3 object-cover rounded-lg shadow-lg"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">TV Show 5</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?tv-show"
+              alt="TV Show 5"
+              class="w-1/3 object-cover rounded-lg shadow-lg"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">TV Show 5</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+          <div class="flex">
+            <img
+              src="https://source.unsplash.com/1600x900/?tv-show"
+              alt="TV Show 5"
+              class="w-1/3 object-cover rounded-lg shadow-lg"
+            />
+            <div class="ml-8">
+              <h3 class="text-2xl font-bold mb-4">TV Show 5</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                malesuada nisl ut ligula consequat consectetur.
+              </p>
+              <button
+                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
+              >
+                Watch Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 px-6 py-12">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <img
+              src="https://source.unsplash.com/150x50/?logo"
+              alt="Logo"
+              class="h-12 mb-4"
+            />
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec
+              diam eleifend, vehicula lectus vitae, dictum mi.
+            </p>
+            <p>&copy; 2023 Netflix Clone</p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Links</h4>
+            <ul class="list-none">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Follow Us</h4>
+            <ul class="list-none flex space-x-4">
+              <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <svg
+                    class="w-6 h-6 fill-current text-gray-500 hover:text-blue-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21.75 0H2.25C1.01 0 0 1.01 0 2.25v19.5C0 22.99 1.01 24 2.25 24h19.5c1.24 0 2.25-1.01 2.25-2.25V2.25C24 1.01 22.99 0 21.75 0zM15.6 7.8h1.8V5.4h-1.8c-.62 0-1.2.24-1.63.67-.44.44-.67 1.02-.67 1.63v1.8h-1.8v2.4h1.8v6h2.4v-6h1.8l.3-2.4h-2.1v-1.2c0-.3.07-.58.22-.84.15-.26.36-.47.62-.62.26-.15.54-.22.84-.22z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <svg
+                    class="w-6 h-6 fill-current text-gray-500 hover:text-blue-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21.75 0H2.25C1.01 0 0 1.01 0 2.25v19.5C0 22.99 1.01 24 2.25 24h19.5c1.24 0 2.25-1.01 2.25-2.25V2.25C24 1.01 22.99 0 21.75 0zM15.6 7.8h1.8V5.4h-1.8c-.62 0-1.2.24-1.63.67-.44.44-.67 1.02-.67 1.63v1.8h-1.8v2.4h1.8v6h2.4v-6h1.8l.3-2.4h-2.1v-1.2c0-.3.07-.58.22-.84.15-.26.36-.47.62-.62.26-.15.54-.22.84-.22z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <a href="https://www.facebook.com/" target="_blank">
+                <svg
+                  class="w-6 h-6 fill-current text-gray-500 hover:text-blue-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21.75 0H2.25C1.01 0 0 1.01 0 2.25v19.5C0 22.99 1.01 24 2.25 24h19.5c1.24 0 2.25-1.01 2.25-2.25V2.25C24 1.01 22.99 0 21.75 0zM15.6 7.8h1.8V5.4h-1.8c-.62 0-1.2.24-1.63.67-.44.44-.67 1.02-.67 1.63v1.8h-1.8v2.4h1.8v6h2.4v-6h1.8l.3-2.4h-2.1v-1.2c0-.3.07-.58.22-.84.15-.26.36-.47.62-.62.26-.15.54-.22.84-.22z"
+                  />
+                </svg>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
