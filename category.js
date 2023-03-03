@@ -1,4 +1,4 @@
-const apiKey = "8810224372b460888a4da53b3953f38b";
+const apiKey = "0bc1618d70a229155e690acb97bd4040";
 const categoryId = window.location.href.split("cid=")[1].split("&")[0];
 categoryName = window.location.href.split("category=")[1]
 const catergoryMovieContainer = document.getElementById(
