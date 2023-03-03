@@ -44,7 +44,7 @@ function createCategoryCard(category) {
     "bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700";
   categoryCardBtn.textContent = "Explore";
   categoryCardBtn.addEventListener("click", () => {
-    window.location.href = `/category.html?cid=${category.id}`;
+    window.location.href = `/category.html?cid=${category.id}&category=${category.name}`;
   });
   categoryCardContent.appendChild(categoryCardName);
   categoryCardContent.appendChild(categoryCardBtn);

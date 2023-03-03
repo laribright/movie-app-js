@@ -1,6 +1,11 @@
 const apiKey = "8810224372b460888a4da53b3953f38b";
-const categoryId = window.location.href.split("=")[1];
-const catergoryMovieContainer = document.getElementById("category-movie-container");
+const categoryId = window.location.href.split("cid=")[1].split("&")[0];
+categoryName = window.location.href.split("category=")[1]
+const catergoryMovieContainer = document.getElementById(
+  "category-movie-container"
+);
+const categoryTitleContainer = document.getElementById("category-title");
+categoryTitleContainer.textContent = `${categoryName} Movies`
 
 // Define the URL for the API request
 const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${categoryId}`;
@@ -49,6 +54,9 @@ function createCategoryMovieCard(categoryMovie) {
   categoryMovieCardButton.className =
     "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg";
   categoryMovieCardButton.textContent = "Watch Now";
+  categoryMovieCardButton.addEventListener("click", () => {
+    window.location.href = `/movie.html?mid=${categoryMovie.id}`;
+  });
 
   categoryMovieCardBg.appendChild(categoryMovieCardImgContainer);
   categoryMovieCardBg.appendChild(categoryMovieCardTitle);
