@@ -52,7 +52,7 @@ function createCategoryMovieCard(categoryMovie) {
 
   const categoryMovieCardButton = document.createElement("button");
   categoryMovieCardButton.className =
-    "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg";
+    "bg-red-600 px-6 py-2 rounded-full font-bold hover:bg-red-700";
   categoryMovieCardButton.textContent = "Watch Now";
   categoryMovieCardButton.addEventListener("click", () => {
     window.location.href = `/movie.html?mid=${categoryMovie.id}`;
