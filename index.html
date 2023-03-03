@@ -9,9 +9,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css"
     />
+    <script defer src="main.js"></script>
+    <script defer src="category.js"></script>
   </head>
   <body>
-    <header class="bg-gray-900 py-4">
+    <!-- <header class="bg-gray-900 py-4">
       <div class="container mx-auto flex justify-between items-center">
         <a href="#" class="flex items-center">
           <img
@@ -50,7 +52,7 @@
           </button>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <section class="bg-gray-900">
       <div class="container mx-auto flex items-center relative">
@@ -79,83 +81,15 @@
       </div>
     </section>
 
+    <!-- CATEGORIES -->
     <section class="py-20 bg-gray-100">
       <div class="container mx-auto">
         <h2 class="text-4xl font-bold mb-10">Popular Categories</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="relative">
-            <img
-              src="https://source.unsplash.com/1600x900/?action,movie"
-              alt="Action & Adventure"
-              class="w-full h-auto rounded-lg shadow-lg"
-            />
-            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-            <div
-              class="absolute inset-0 flex flex-col items-center justify-center text-white"
-            >
-              <h3 class="text-2xl font-bold mb-4">Action & Adventure</h3>
-              <button
-                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
-              >
-                Explore
-              </button>
-            </div>
-          </div>
-          <div class="relative">
-            <img
-              src="https://source.unsplash.com/1600x900/?drama,movie"
-              alt="Drama"
-              class="w-full h-auto rounded-lg shadow-lg"
-            />
-            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-            <div
-              class="absolute inset-0 flex flex-col items-center justify-center text-white"
-            >
-              <h3 class="text-2xl font-bold mb-4">Drama</h3>
-              <button
-                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
-              >
-                Explore
-              </button>
-            </div>
-          </div>
-          <div class="relative">
-            <img
-              src="https://source.unsplash.com/1600x900/?comedy,movie"
-              alt="Comedy"
-              class="w-full h-auto rounded-lg shadow-lg"
-            />
-            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-            <div
-              class="absolute inset-0 flex flex-col items-center justify-center text-white"
-            >
-              <h3 class="text-2xl font-bold mb-4">Comedy</h3>
-              <button
-                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
-              >
-                Explore
-              </button>
-            </div>
-          </div>
-          <div class="relative">
-            <img
-              src="https://source.unsplash.com/1600x900/?horror,movie"
-              alt="Horror"
-              class="w-full h-auto rounded-lg shadow-lg"
-            />
-            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-            <div
-              class="absolute inset-0 flex flex-col items-center justify-center text-white"
-            >
-              <h3 class="text-2xl font-bold mb-4">Horror</h3>
-              <button
-                class="bg-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-700"
-              >
-                Explore
-              </button>
-            </div>
-          </div>
-        </div>
+
+        <div
+          id="categories"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        ></div>
       </div>
     </section>
 
