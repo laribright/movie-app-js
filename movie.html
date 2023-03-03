@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movie - Details</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+</head>
+
+<body>
+  <div class="relative h-screen">
+    
+    <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="https://cdn.pixabay.com/vimeo/724673230/lamb-120739.mp4?width=1280&expiry=1677849340&hash=e7818ffa09a08d9f6d60101f6816a12d4ce08276" type="video/mp4">
+    </video>
+
+    
+    <div class="relative z-10 h-full flex flex-col justify-center items-center">
+      
+      <div class="bg-white bg-opacity-50 rounded-md p-4 max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-2">Category Name</h1>
+        <p class="text-xl mb-4">Category description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in quam ligula. Sed tristique orci id elit auctor, a bibendum nibh commodo.</p>
+      </div>
+
+      
+      <div class="bg-white bg-opacity-50 rounded-md p-4 max-w-4xl mx-auto mt-8">
+        <img src="https://images.unsplash.com/photo-1677690742158-8f12c1296edc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60" alt="Movie Poster" class="w-48 rounded-lg float-left mr-4 mb-4">
+        <h2 class="text-2xl font-bold mb-2">Movie Title</h2>
+        <p class="text-lg mb-2">Movie description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in quam ligula. Sed tristique orci id elit auctor</p>
+        <p class="text-lg mb-2">Movie length: 120 minutes</p>
+        <p class="text-lg mb-2">Director: John Doe</p>
+        <p class="text-lg mb-2">Cast: Jane Doe, Michael Smith</p>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Watch Now</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
