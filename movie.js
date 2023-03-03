@@ -1,5 +1,5 @@
 const movieId = window.location.href.split("=")[1];
-const apiKey = "8810224372b460888a4da53b3953f38b";
+const apiKey = "0bc1618d70a229155e690acb97bd4040";
 
 const movieTitle = document.getElementById("movie-title");
 const movieImage = document.getElementById("movie-image");
