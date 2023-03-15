@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movie - Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+    />
+    <script defer src="movie.js"></script>
+  </head>
+
+  <body>
+    <div class="relative h-screen">
+      <video
+        autoplay
+        loop
+        muted
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="static/wolf-bg.mp4" type="video/mp4" />
+      </video>
+
+      <div
+        class="relative z-10 h-full flex flex-col justify-center items-center"
+      >
+        <div
+          class="bg-white bg-opacity-50 rounded-md p-4 max-w-4xl mx-auto mt-8"
+        >
+          <img
+            id="movie-image"
+            src="https://images.unsplash.com/photo-1677690742158-8f12c1296edc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60"
+            alt="Movie Poster"
+            class="w-48 rounded-lg float-left mr-4 mb-4"
+          />
+          <h2 id="movie-title" class="text-2xl font-bold mb-2">Movie Title</h2>
+          <p id="movie-description" class="text-lg mb-2">
+            Movie description goes here. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Nullam in quam ligula. Sed tristique orci id elit
+            auctor
+          </p>
+          <p class="text-lg mb-2">Movie length: 120 minutes</p>
+          <p class="text-lg mb-2">Director: John Doe</p>
+          <p class="text-lg mb-2">Cast: Jane Doe, Michael Smith</p>
+          <button
+            id="watch-now-button"
+            class="bg-red-600 px-6 py-2 rounded-full font-bold hover:bg-red-700"
+          >
+            Watch Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal backdrop -->
+    <div
+      class="fixed hidden inset-0 z-50 bg-black opacity-90"
+      id="modal-backdrop"
+    ></div>
+
+    <div
+      class="fixed hidden inset-0 z-50 flex items-center justify-center"
+      id="modal-container"
+    >
+      <div
+        class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all max-w-md w-full mx-auto"
+        id="modal-content"
+      >
+        <div class="relative overflow-hidden pb-9/16">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/lF7LlSEz3-o"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <!-- Close button -->
+        <button
+          class="absolute top-0 right-0 m-4 p-2 bg-gray-700 text-white rounded-full hover:bg-gray-800 transition-colors duration-300"
+          id="modal-close"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
